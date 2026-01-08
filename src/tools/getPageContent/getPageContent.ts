@@ -1,6 +1,6 @@
 import type { DefaultApi } from "buildin-api-sdk";
-import { fetchPageContent } from "../common/blockFetcher.js";
-import { renderPageToMarkdown } from "../common/markdownRenderer.js";
+import { fetchPageContent } from "./blockFetcher.js";
+import { renderPageToMarkdown } from "./markdownRenderer.js";
 
 /**
  * Retrieves a Buildin.ai page and converts it to markdown

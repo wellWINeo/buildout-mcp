@@ -1,0 +1,18 @@
+# Source files
+src/
+tsconfig.json
+
+# Development files
+.env
+.env.dev
+.git/
+.github/
+node_modules/
+
+# Documentation
+AGENTS.md
+README.md
+
+# Build artifacts
+*.log
+*.tgz

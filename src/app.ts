@@ -5,8 +5,8 @@ import {
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { Configuration, DefaultApi } from "buildin-api-sdk";
 import { z } from "zod";
-import { getPageContent } from "./tools/getPageContent.js";
-import { search } from "./tools/search.js";
+import { getPageContent } from "./tools/getPageContent/getPageContent.js";
+import { search, type SearchOptions } from "./tools/search/search.js";
 import { BUILDIN_INSTRUCTIONS } from "./prompts/instructions.js";
 
 const server = new McpServer({
@@ -68,11 +68,11 @@ server.registerTool(
     },
   },
   async ({ query, startCursor, pageSize }) => {
-    const options: Parameters<typeof search>[1] = { query };
-    if (startCursor) options.startCursor = startCursor;
-    if (pageSize) options.pageSize = pageSize;
-
-    const { results, nextCursor, hasMore } = await search(buildin, options);
+    const { results, nextCursor, hasMore } = await search(buildin, {
+      query,
+      startCursor,
+      pageSize,
+    });
 
     const content: Array<
       | {

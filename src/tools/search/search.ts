@@ -1,13 +1,10 @@
 import type { DefaultApi, V1SearchRequest } from "buildin-api-sdk";
-import {
-  formatSearchResponse,
-  type SearchResult,
-} from "../common/searchFormatter.js";
+import { formatSearchResponse, type SearchResult } from "./searchFormatter.js";
 
 export type SearchOptions = {
   query: string;
-  startCursor?: string;
-  pageSize?: number;
+  startCursor: string | undefined;
+  pageSize: number | undefined;
 };
 
 /**

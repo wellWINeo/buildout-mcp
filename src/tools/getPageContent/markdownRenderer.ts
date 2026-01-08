@@ -1,5 +1,5 @@
 import type { RichTextItem, PropertyValueTitle } from "buildin-api-sdk";
-import type { BlockNode, PageContent } from "./types.js";
+import type { BlockNode, PageContent } from "../../common/types.js";
 
 /**
  * Converts rich text array to markdown string with annotations

@@ -1,5 +1,5 @@
 import type { Block, DefaultApi } from "buildin-api-sdk";
-import type { BlockNode, PageContent } from "./types.js";
+import type { BlockNode, PageContent } from "../../common/types.js";
 
 /**
  * Fetches all children of a block, handling pagination

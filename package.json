@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "Better MCP server for Buildin.ai",
   "type": "module",
-  "main": "app.js",
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/app.js",
@@ -16,6 +20,14 @@
   ],
   "author": "wellWINeo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellWINeo/buildout-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wellWINeo/buildout-mcp/issues"
+  },
+  "homepage": "https://github.com/wellWINeo/buildout-mcp#readme",
   "volta": {
     "node": "24.12.0"
   },
