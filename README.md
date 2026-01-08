@@ -12,6 +12,8 @@ focused on readonly access and supports only search and page full text retrieval
 
 ## Usage
 
+### Obtain access token
+
 To use Buildout MCP you need Buildin.ai API key:
 - Go to [developer center](https://buildin.ai/dev/integrations)
 - Create integration app -> App plugins -> Next
@@ -19,7 +21,28 @@ To use Buildout MCP you need Buildin.ai API key:
 - `BUILDIN_API_KEY` is the Authorization token
 - Also grant integration access to desired pages in `Access permissions` tab
 
-Clone and build:
+### NPM
+
+```json
+{
+  "mcpServers": {
+    "buildin": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "buildout-mcp"
+      ],
+      "env": {
+        "BUILDIN_API_KEY": "<BUILD_ACCESS_TOKEN>"
+      }
+    }
+  }
+}
+```
+
+### Clone and build:
+
 ```shell
 git clone https://github.com/wellwineo/buildout-mcp
 cd buildout-mcp
@@ -38,7 +61,7 @@ Configure mcp server:
         "/path/to/buildout-mcp/dist/app.js"
       ],
       "env": {
-        "BUILDIN_API_KEY": "<BUILDIN_API_KEY>"
+        "BUILDIN_API_KEY": "<BUILD_ACCESS_TOKEN>"
       }
     } 
   }
