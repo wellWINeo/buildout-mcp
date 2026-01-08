@@ -1,10 +1,13 @@
 {
   "name": "buildout-mcp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Better MCP server for Buildin.ai",
   "type": "module",
   "main": "dist/app.js",
   "types": "dist/app.d.ts",
+  "bin": {
+    "buildout-mcp": "dist/app.js"
+  },
   "files": [
     "dist"
   ],
